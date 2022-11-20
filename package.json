@@ -8,14 +8,37 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "autoprefixer": "10.4.5",
+    "concurrently": "^7.2.0",
+    "cssnano": "^5.1.9",
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-react-redux": "^4.0.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "postcss-autoreset": "^3.0.4",
+    "prettier": "2.6.2",
+    "sass": "^1.52.1",
+    "tailwindcss": "^3.0.24"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "concurrently  \"npm run start-server\" \"npm run gulp\" -k -s all",
+    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
+    "eslint": "eslint --fix --ext .js --ext .jsx .",
+    "start-server": "react-scripts start",
+    "gulp": "gulp"
   },
   "eslintConfig": {
     "extends": [

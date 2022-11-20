@@ -1,0 +1,156 @@
+.RentTitle {
+  display: flex;
+  flex-direction: column;
+  width: 1240px;
+  height: 371px;
+  border-radius: 20px;
+  background-color: #F2F4F7;
+  font-family: 'Montserrat', serif;
+
+  &__Label {
+    line-height: 57.6px;
+    font-size: 48px;
+    color: #14233D;
+    margin-right: 2px;
+  }
+
+  &__Row {
+    padding-left: 40px;
+  }
+
+  &__Row:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 207px;
+    padding-bottom: 29px;
+  }
+
+  &__Row:nth-child(2) {
+    display: grid;
+    grid-template-columns: 260px;
+  }
+
+  &__Col:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__Col:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  &__TrapezoidElement {
+    vertical-align: middle;
+    background: #A5C7FA;
+    padding-left: 154px;
+    height: 207px;
+    width: 150px;
+    position: absolute;
+    border-top-left-radius: 40px;
+    overflow: hidden;
+    background-clip: content-box;
+    border-top-right-radius: 20px;
+
+    &:after {
+      background: #A5C7FA;
+      border-bottom-left-radius: 40px;
+      border-top-left-radius: 10px;
+      content: "";
+      height: 207px;
+      margin-left: -100px;
+      position: absolute;
+      top: 0;
+      transform: skew(-30deg,0deg);
+      width: 179px;
+    }
+
+    &:nth-child(1) {
+      right: 349px;
+      width: 162px;
+      background-color: #D7E6FF;
+      border-top-right-radius: 0;
+
+      &:after {
+        background: #D7E6FF;
+      }
+
+      .RentTitle__TrapezoidImage {
+        margin-right: 65px;
+      }
+    }
+
+    &:nth-child(2) {
+      right: 152px;
+      width: 162px;
+      background-color: #B9D5FF;
+      border-top-right-radius: 0;
+      z-index: 2;
+
+      &:after {
+        background: #B9D5FF;
+      }
+
+      .RentTitle__TrapezoidImage {
+        margin-right: 66px;
+      }
+    }
+
+    &:nth-child(3) {
+      width: 118px;
+      z-index: 3;
+    }
+  }
+
+  &__TrapezoidContent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    left: 60px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+
+  &__TrapezoidTitle {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 19px;
+  }
+
+  &__TrapezoidImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+    margin-top: 30px;
+
+    img {
+      transition: .3s all linear;
+    }
+  }
+
+  &__TrapezoidLabel {
+    font-weight: 500;
+    font-size: 18px;
+    color: #14233D;
+  }
+
+  &__TrapezoidPrice {
+    font-weight: 700;
+    font-size: 20px;
+    color: #297FFF;
+    margin-top: 5px;
+  }
+}

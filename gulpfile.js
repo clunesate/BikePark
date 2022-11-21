@@ -5,6 +5,7 @@ const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const autoReset = require('postcss-autoreset');
+const fontPath = require('postcss-fontpath');
 
 const css = () => {
   const processors = [
@@ -17,6 +18,14 @@ const css = () => {
     }),
     autoprefixer,
     cssnano,
+    fontPath({
+      formats: [
+        { type: 'embedded-opentype', ext: 'eot' },
+        { type: 'woff2', ext: 'woff2' },
+        { type: 'woff', ext: 'woff' },
+        { type: 'truetype', ext: 'ttf' },
+      ],
+    }),
   ];
 
   return src('./src/styles/*.scss')

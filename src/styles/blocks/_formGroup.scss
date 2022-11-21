@@ -46,4 +46,14 @@
     background: #297FFF;
     color: #ffffff;
   }
+
+  &__Select {
+    background-color: #ffffff;
+    border: 1px solid #DDE3EB;
+    border-radius: 15px;
+    padding: 18px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    appearance: none;
+  }
 }

@@ -76,6 +76,45 @@ function RentTitle() {
             </div>
           </div>
         </div>
+
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="FormGroup" style={{ flexGrow: 1 }}>
+            <label>Дата и время начала</label>
+            <select className="FormGroup__Select">
+              <option className="FormGroup__Select-Item" value="24.07.21 12:00">
+                24.07.21 12:00
+              </option>
+            </select>
+          </div>
+
+          <span
+            style={{
+              border: '2px solid #000000',
+              width: '13px',
+              height: 0,
+              margin: '0 14px',
+              marginTop: '37px',
+            }}
+          />
+
+          <div className="FormGroup" style={{ flexGrow: 1 }}>
+            <label>Дата и время конца</label>
+            <select className="FormGroup__Select">
+              <option className="FormGroup__Select-Item" value="25.07.21 12:00">
+                25.07.21 12:00
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div className="FormGroup">
+          <label>Доставка</label>
+          <select className="FormGroup__Select">
+            <option className="FormGroup__Select-Item" value="1">
+              По адресу
+            </option>
+          </select>
+        </div>
       </div>
     </div>
   );
